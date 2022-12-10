@@ -1,0 +1,16 @@
+a = list(map(int, input().split()))
+d= list(map(int, input().split()))
+ 
+n = len(a)
+p= 1
+x = 1
+
+for i in range(n):
+    p= 1
+ 
+    for j in range(n):
+        if i != j:
+            if (a[i] >= a[j] and d[j] >= a[i]):
+                p+= 1
+    x = max(x, p)
+print(x)
